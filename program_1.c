@@ -15,61 +15,61 @@
 
 int main(int argc, char *argv[])
 {
-	int fd1;
-	int fd2;
-	int return1 = 0;
-	int return2 = 0;
-	char buf[SIZE];
-	if(3 != argc)
-	{
-		printf("Insufficient number of arguments\n");
-		printf("<1>Input file name\n");
-		printf("<2>Output file name\n");
-		exit(1);
-	}
+    int fd1;
+    int fd2;
+    int return1 = 0;
+    int return2 = 0;
+    char buf[SIZE];
+    if(3 != argc)
+    {
+        printf("Insufficient number of arguments\n");
+        printf("<1>Input file name\n");
+        printf("<2>Output file name\n");
+        exit(1);
+    }
 
-	fd1 = open(argv[1], O_RDONLY);
-	if(0 > fd1)
-	{
-		printf("Error in opening the file %s in read only mode\n", argv[1]);
-		perror("opening file error");
-		exit(1);
-	}
+    fd1 = open(argv[1], O_RDONLY);
+    if(0 > fd1)
+    {
+        printf("Error in opening the file %s in read only mode\n", argv[1]);
+        perror("opening file error");
+        exit(1);
+    }
 
-	fd2 = open(argv[2], O_CREAT|O_WRONLY|O_TRUNC, S_IRWXU);
-	if(0 > fd2)
-	{
-		printf("Error in opening the file %s in write only mode\n", argv[2]);
-		perror("file writing error");
-		exit(1);
-	}
+    fd2 = open(argv[2], O_CREAT|O_WRONLY|O_TRUNC, S_IRWXU);
+    if(0 > fd2)
+    {
+        printf("Error in opening the file %s in write only mode\n", argv[2]);
+        perror("file writing error");
+        exit(1);
+    }
 
-	while(0 != read(fd1,buf,sizeof(char)))
-	{
-		write(fd2,buf,sizeof(char));
-	}
+    while(0 != read(fd1,buf,sizeof(char)))
+    {
+        write(fd2,buf,sizeof(char));
+    }
 
-	return1 = close(fd1);
-        if(return1 != -1)
-        {
-                printf("File %s successfully closed\n", argv[1]);
-        }
-        else
-        {
-                printf("Error in closing the file  %s \n", argv[1]);
-                perror("File closing error");
-        }
+    return1 = close(fd1);
+    if(return1 != -1)
+    {
+        printf("File %s successfully closed\n", argv[1]);
+    }
+    else
+    {
+        printf("Error in closing the file  %s \n", argv[1]);
+        perror("File closing error");
+    }
 
-        return2 = close(fd2);
-        if(return2 != -1)
-        {
-                printf("File %s successfully closed\n", argv[2]);
-        }
-        else
-        {
-                printf("Error in closing the file  %s \n", argv[2]);
-                perror("File closing error");
-        }
-return SUCCESS;
+    return2 = close(fd2);
+    if(return2 != -1)
+    {
+        printf("File %s successfully closed\n", argv[2]);
+    }
+    else
+    {
+        printf("Error in closing the file  %s \n", argv[2]);
+        perror("File closing error");
+    }
+    return SUCCESS;
 }//end of main
 
