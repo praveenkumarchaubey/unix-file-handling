@@ -1,4 +1,8 @@
-/*Write a program to open 2 files (the names of the files should be taken as command line arguments) one in read only mode and the other in write only mode and then read the characters from the first file and write them into the second file. However do not write all the characters in the second file; write the first one and then every nth character (n can be any positive number here) from the the first file. Also check whether the opened file exists and if not then catch the exception by writing the code for the error also.*/
+/* Write a program to open 2 files (the names of the files should be taken as command line arguments) one in read only mode and the other in write only mode
+ * and then read the characters from the first file and write them into the second file.
+ * However do not write all the characters in the second file;
+ * write the first one and then every nth character (n can be any positive number here) from the the first file.
+ * Also check whether the opened file exists and if not then catch the exception by writing the code for the error also.*/
 
 #include<stdio.h>
 #include<stdlib.h>

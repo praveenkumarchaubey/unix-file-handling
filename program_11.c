@@ -1,5 +1,7 @@
 /***************************************************************************
- * Contains Code for a program that demonstrates the use of  open/read/write calls. Copies source to destination  Invoke the Executable as a.out source destination
+ * Contains Code for a program that demonstrates the use of  open/read/write calls.
+ * Copies source to destination 
+ * Invoke the Executable as a.out source destination
  ****************************************************************************/
 
 #include<stdio.h>
@@ -37,7 +39,7 @@ int main(int argc, char *argv[])
 
     /* Open the destination  file in Write Only Mode*/
     /* Also note we are giving the EXCL flag, so that if the destination 
-      file exists, the function will return an error*/
+       file exists, the function will return an error*/
 
     fd2=open(argv[2],O_WRONLY|O_CREAT|O_EXCL,S_IRWXU);
 

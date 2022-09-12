@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
         perror("File Opening Error:");
         exit(0);
     }
-    
+
     /*Print the current file offset in RDWR mode*/
     currpos = lseek(fd, 0, SEEK_CUR);
     printf("The value of the current file offset =%d\n", currpos);

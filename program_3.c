@@ -1,4 +1,7 @@
-/*Write a program to open 2 files (the names of the files should be taken as command line arguments) one in read only mode and the other in write only mode and then read the contents of the first file and write them into the second file, word by word. However the words should be written in the reverse order, the first word of the first file should be the last word of second file and the last word of the first file should be the first word of the second file.*/
+/* Write a program to open 2 files (the names of the files should be taken as command line arguments) one in read only mode and the other in write only mode
+ * and then read the contents of the first file and write them into the second file, word by word.
+ * However the words should be written in the reverse order, the first word of the first file should be the last word of second file 
+ * and the last word of the first file should be the first word of the second file.*/
 
 #include<stdio.h>
 #include<stdlib.h>

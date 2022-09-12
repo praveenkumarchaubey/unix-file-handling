@@ -1,4 +1,4 @@
-/*Write a program to open a file in RDWR mode and read the characters from the file and append them in the same file.*/
+/* Write a program to open a file in RDWR mode and read the characters from the file and append them in the same file.*/
 
 #include<stdio.h>
 #include<stdlib.h>

@@ -1,5 +1,7 @@
 /***************************************************************************
- * Contains Code for a program that demonstrates the use of open and write call. Writes a string in the file. Invoke the Executable as a.out
+ * Contains Code for a program that demonstrates the use of open and write call. 
+ * Writes a string in the file. 
+ * Invoke the Executable as a.out
  ****************************************************************************/
 
 #include<stdio.h>
@@ -28,11 +30,11 @@ int main()
     {	printf("Error in eriting the file\n");
         exit(1);
     }
-    
+
     printf("Number of bytes written =%d\n",n);
     /*Closing the file descriptor*/
     close(fd1);
-    
+
     return 0;
 }
 

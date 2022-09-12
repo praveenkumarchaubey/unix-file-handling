@@ -1,4 +1,6 @@
-/*Write a program to open two files (say .f1. and .f2.). Close the standard output file and then use the dup system call to duplicate the file descriptor of one of the files (say, .f2) into standard output file (fd = 1). Read from the first file (.f1. ) and write into standard output use printf() and show that printf writes into the .f2.*/
+/* Write a program to open two files (say .f1. and .f2.).
+ * Close the standard output file and then use the dup system call to duplicate the file descriptor of one of the files (say, .f2) into standard output file (fd = 1).
+ * Read from the first file (.f1. ) and write into standard output use printf() and show that printf writes into the .f2.*/
 
 #include<stdio.h>
 #include<stdlib.h>
@@ -45,7 +47,7 @@ int main(int argc, char *argv[])
         exit(1);
     }
     close(0);
-    
+
     new_fd = dup(fd2);
     printf("please enter\n");
     scanf("%s",buf);
